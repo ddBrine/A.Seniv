@@ -1,0 +1,45 @@
+BANK ACCOUNT
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace bank
+{
+    class main
+    {
+        static void Main(string[] args)
+        {
+            int id = Convert.ToInt32(Console.ReadLine());
+            int money = Convert.ToInt32(Console.ReadLine());
+            First A = new First(id, money);
+            Console.WriteLine("\n");
+            A.output(id, money);
+
+        }
+    }
+
+    class First
+    {
+        int ID;
+        int Money;
+
+        public First(int id, int money)
+        {
+            ID = id;
+            Money = money;
+        }
+
+        public void output(int ID, int Money)
+        {
+            Console.WriteLine("\nBank ID: " + ID + "\n");
+            Console.WriteLine("\nYour money: " + Money + "$\n");
+        }
+    }
+
+    internal class Second : First
+    {
+
+    }
+}
